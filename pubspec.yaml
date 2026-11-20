@@ -1,0 +1,27 @@
+name: practica_geolocalizacion
+description: Semana 10 - Geolocalización y Mapas en Flutter
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+# Dependencias de la diapositiva "Paso 03". geocoding sube de ^3.0.0 a ^4.0.0 porque
+# la 3.x compila contra Android SDK 33 y falla con las herramientas actuales;
+# la 4.0.0 usa SDK 35 y tiene la misma API (placemarkFromCoordinates).
+# Si `flutter pub get` dice que no existe ^2.19.0 para google_maps_flutter,
+# cambia esa línea a:  google_maps_flutter: ^2.17.0
+dependencies:
+  flutter:
+    sdk: flutter
+  google_maps_flutter: ^2.19.0
+  geolocator: ^13.0.2
+  geocoding: ^4.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
